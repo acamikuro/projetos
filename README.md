@@ -1,0 +1,1 @@
+Esse repositório é para guardar projetos feitos em live por mim e comparar minha evolução nos estudos em JavaScript ou em outra linguagem de programação. Sinta-se a vontade para estudar por aqui também!

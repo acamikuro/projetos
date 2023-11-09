@@ -1,56 +1,25 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+#tabuleiro {
+    width: 600px;
+    height: 600px;
+    border: solid 3px;
+  }
 
-.calculator {
-    background: #101010;
-    width: 25em;
-    margin: 5em auto;
-}
+  .linha {
+    height: 200px;
+    border-bottom: solid 1px;
+  }
 
-.display {
-    background: #222222;
-    color: #fff;
-    text-align: right;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.7em;
-    height: 6em;
-    line-height: 8em;
-    padding: 0 1.5em;
-}
+  .casa {
+    width: 200px;
+    height: 100%;
+    border-right: solid 1px;
+    box-sizing: border-box;
+    float: left;
+  }
 
-.controls {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 0.7em 0;
-    margin: auto 0.5em;
-}
-
-.controls button {
-    background: #222222;
-    color: #fff;
-    height: 5.5em;
-    cursor: pointer;
-    margin: 0.5em;
-    border: unset;
-    border-radius: 0.5em;
-    outline: unset;
-}
-
-.controls button:hover {
-    background: #333333;
-}
-
-.controls button:active {
-    transform: translateY(0.5em);
-}
-
-.controls .teal {
-    background: #005755;
-}
-
-.controls .teal:hover {
-    background: #0000;
-}
-
+  .elementos {
+    font-size: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

@@ -16,7 +16,8 @@ const operators1 = (array) => {
 const calculate = () => {
   firstValue = parseFloat(firstValue);
   secondValue = parseFloat(secondValue);
-
+  console.log("primeiro" + firstValue)
+  console.log("segundo" +secondValue)
   if (symbol === "+") result = firstValue + secondValue;
   if (symbol === "-") result = firstValue - secondValue;
   if (symbol === "X") result = firstValue * secondValue;
@@ -24,8 +25,8 @@ const calculate = () => {
   if (symbol === "%") result = firstValue % secondValue;
 
   display.innerText = result;
-  firstValue = result;
-  secondValue = "";
+  firstValue = result.toString();
+  secondValue = "0";
 };
 
 for (let button of controlButtons) {
@@ -39,9 +40,8 @@ for (let button of controlButtons) {
     //console.log('display: ', display.textContent)
 
 
-    if(!Number(hist) && !Number(e.target.textContent)) {
-      display.innerText = operators1([...hist]).toString()
-      //console.log('yes')
+    if(!Number(hist) && !Number(e.target.textContent) && btnValue != "⌫") {
+      display.innerText = display.innerText.substring(0,display.innerText.length-1)+ operators1([...hist]).toString()
     }
 
     if (!secondValue && btnValue === "=") return null;
@@ -55,7 +55,7 @@ for (let button of controlButtons) {
         display.innerHTML = display.innerText.slice(0, -1);
        }
        //debugger;
-    if (firstValue && btnValueIsSymbol) {
+     else if (firstValue && btnValueIsSymbol) {
       secondValue && calculate();
       symbol = btnValue;
     } else if (!symbol) firstValue += btnValue;
